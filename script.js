@@ -1,7 +1,17 @@
-const button = document.querySelecton("button")
-button.addEventListener( "click", receiveData )
+const button = document.querySelector("button")
+button.addEventListener("click", receiveData)
 
-function receiveData() {
-  fetch("http://localhost:3000").then(response => response.json()).then(data => console.log(data.message))
-
-}
+ async function receiveData () {
+   const persons =  await fetch ("http://localhost:3333").then(response => response.json())
+ 
+   persons.map(persons => {
+    document.querySelector("main").innerHTML += `
+      <section>
+        <h1>Nome: ${persons.name}</h1>
+        <p>E-mail:${persons.email}</p>
+        <p>Idade: ${persons.age}</p>
+        <p>Apelido: ${persons.nickname}</p>
+    </section>
+    `
+   })
+ }
