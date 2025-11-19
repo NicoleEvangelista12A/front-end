@@ -1,0 +1,23 @@
+{
+  "name": "frontenddd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+  "dev": "nodemon --env-file=.env src/index.js localhost 3000"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoleEvangelista12A/front-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoleEvangelista12A/front-end/issues"
+  },
+  "homepage": "https://github.com/NicoleEvangelista12A/front-end#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
